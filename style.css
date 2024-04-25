@@ -1,0 +1,29 @@
+:root{
+    --leterspacing: .1vw;
+}
+*{
+    user-select: none;
+}
+
+body{
+    background-color: #FEFAE0;
+    padding: 5px;
+}
+
+p{
+    font-family: "Space Mono", monospace;
+    letter-spacing: var(--leterspacing);
+}
+
+.text-right{
+    text-align: right;
+}
+.projects{
+    margin-top: 35px;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 94vw;
+}
