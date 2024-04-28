@@ -1,29 +1,64 @@
-:root{
-    --leterspacing: .1vw;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+:root {
+  --leterspacing: 0.1vw;
+  --text: "Playfair Display", serif;
 }
-*{
-    user-select: none;
+* {
+  user-select: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden;
 }
 
-body{
-    background-color: #FEFAE0;
-    padding: 5px;
+body {
+    background-color: black;
+  padding: 5px;
 }
 
-p{
-    font-family: "Space Mono", monospace;
-    letter-spacing: var(--leterspacing);
+p {
+  font-family: "Space Mono", monospace;
+  letter-spacing: var(--leterspacing);
 }
 
-.text-right{
-    text-align: right;
-}
-.projects{
-    margin-top: 35px;
+#pattern {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-image: url("pattern.png");
+  background-size: 10%;
+  position: absolute;
+  left: 50%;
+  top: 0px;
+  translate: -50% 0%;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  min-width: 1200px;
+  opacity: .1;
+  animation: pan 180s linear infinite;
+  will-change: background-position;
 }
 
-.container{
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 94vw;
+.text-right {
+  text-align: right;
 }
+.projects {
+  margin-top: 35px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 94vw;
+}
+
+@keyframes pan {
+    0% {
+      background-position: 0% -200%;
+    }
+    100% {
+      background-position: 100% 0%;
+    }
+  }
