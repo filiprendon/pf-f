@@ -22,6 +22,17 @@ html {
   overflow-x: hidden;
 }
 
+*::-webkit-scrollbar {
+  display: none;
+}
+
+.wt{
+  font-family: var(--titles);
+  color: var(--textColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 a {
   text-decoration: none;
   color: var(--callToAction);
