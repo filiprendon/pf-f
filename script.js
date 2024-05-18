@@ -10,3 +10,7 @@ function typeWriter(element, text, i = 0) {
   const typingSpeed = 40;
   
   typeWriter(element, text);
+
+
+
+  
